@@ -3,7 +3,7 @@ class Directgate < Formula
   homepage "https://github.com/directgate/directgate-agent"
   url "https://pkg.directgate.io/brew/directgate-1.0.18.tar.gz"
   version "1.0.18"
-  sha256 "0a88560009b3ab9362e1270b3981482fdde9d3e4cf1c6804129af31fd95c4dc4"
+  sha256 "29360a055b4cb88da2c1a6a3d81e47f156793d06f33c5aefdea50c9cb1cfe76a"
   license "GPL-3.0-or-later"
 
 
@@ -12,8 +12,8 @@ class Directgate < Formula
   depends_on "openssl@3"
 
   resource "libdatachannel" do
-    url "https://pkg.directgate.io/brew/directgate-dev/pkg/out/libdatachannel-28b2e730f4c7.tar.gz"
-    sha256 "0b61daf21ebfa9377eb623f713528b21d8ae75d2609738c781c24a752d76bfc9"
+    url "https://pkg.directgate.io/brew/libdatachannel-28b2e730f4c7.tar.gz"
+    sha256 "df44a268208ef320bc1c8dd40eb93a996492855a78e19c6f17b8c93e15cf8cca"
   end
 
   def install
