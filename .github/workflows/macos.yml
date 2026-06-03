@@ -1,0 +1,21 @@
+name: MacOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  install:
+    runs-on: macos-latest
+
+    steps:
+      - name: Tap DirectGate
+        run: brew tap directgate/directgate
+
+      - name: Install DirectGate
+        run: brew install directgate
+
+      - name: Verify installation
+        run: directgate -h
