@@ -3,9 +3,9 @@ class Directgate < Formula
   homepage "https://github.com/directgate/directgate"
   url "https://pkg.directgate.io/brew/directgate-1.0.19.tar.gz"
   version "1.0.19"
-  sha256 "553db57a98c4d9bbe2ed75a2ca144386d6f18cb9b466f3c0b1cc9ed0e56cd9bd"
+  sha256 "9a7d05c0b36e64ed0a5e4cca20ccd8b8764012fa6617a3501d04976d48bbbcf2"
   license "GPL-3.0-or-later"
-  revision 7
+  revision 8
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -13,7 +13,7 @@ class Directgate < Formula
 
   resource "libdatachannel" do
     url "https://pkg.directgate.io/brew/libdatachannel-28b2e730f4c7.tar.gz"
-    sha256 "6ab93fb671c1b114a08b46293cadc203ef9243ce586841c646116e88921e854e"
+    sha256 "44405c39960bcffe42a7c07167c1bd77e0c4d6d625e9c7542240adf33153be10"
   end
 
   def install
@@ -56,6 +56,10 @@ class Directgate < Formula
 
       Then start the launchd service:
         brew services start directgate
+
+      Remote desktop requires macOS 12.3 or newer. Grant DirectGate Screen
+      Recording permission for capture and Accessibility permission for input
+      in System Settings > Privacy & Security, then restart the service.
     EOS
   end
 
