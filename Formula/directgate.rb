@@ -3,17 +3,20 @@ class Directgate < Formula
   homepage "https://github.com/directgate/directgate"
   url "https://pkg.directgate.io/brew/directgate-1.0.20.tar.gz"
   version "1.0.20"
-  sha256 "9749b1a395e1eec219c41ddf3063dc26d0f0acecbecde6c63e0416d168965d1f"
+  sha256 "f33de4cd2f90f6f423e0da64678f661bfd6091fb815e81fe442cf517098eb6e4"
   license "GPL-3.0-or-later"
-
+  revision 1
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "openssl@3"
+  # Runtime Opus encoder for desktop system audio (dlopen'd; video is
+  # unaffected if absent). Screen/audio capture itself uses OS frameworks.
+  depends_on "opus"
 
   resource "libdatachannel" do
     url "https://pkg.directgate.io/brew/libdatachannel-28b2e730f4c7.tar.gz"
-    sha256 "0c07ca09085785f928bf5af58fa0cdb8afd754f19876c10ddca3120168a73fd2"
+    sha256 "4fa5a249e1a73f03cad7970503caf4579d693ef2a9fc9acb76a0d3be18e95462"
   end
 
   def install
