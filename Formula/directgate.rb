@@ -3,9 +3,9 @@ class Directgate < Formula
   homepage "https://github.com/directgate/directgate"
   url "https://pkg.directgate.io/brew/directgate-1.0.21.tar.gz"
   version "1.0.21"
-  sha256 "d7e87f8cf92969b0cf39f169d2b73ce74b3f1013381ccd4bfad00fd561584d6b"
+  sha256 "91c2406744fa56f7595db93b6e877538af3fbe146905862aa0ebdc1c246b3324"
   license "GPL-3.0-or-later"
-  revision 6
+  revision 7
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -16,7 +16,7 @@ class Directgate < Formula
 
   resource "libdatachannel" do
     url "https://pkg.directgate.io/brew/libdatachannel-28b2e730f4c7.tar.gz"
-    sha256 "227b7fb69c7c745c0c5131b7b60ac24bc0b051c300c898ec09a72b7cb7be6150"
+    sha256 "bf6e2d9dd04e8a50da81bc880b7a5e79ed8ed093944d646ec436c528e532c0e2"
   end
 
   def install
